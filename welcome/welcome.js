@@ -11,7 +11,7 @@ function proceedUnlock() {
     if(checkbox.checked) {
         button.disabled = false
         button.style.cursor = 'pointer'
-    } else{
+    } else {
         button.disabled = true
         button.style.cursor = 'not-allowed'
     }

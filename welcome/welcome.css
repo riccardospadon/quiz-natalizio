@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Knewave&display=swap');
 
+/* TODO: SISTEMARE FONT E COLORE PER RENDERLO IL PIÙ LEGGIBILE POSSIBILE */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,9 +15,18 @@ body {
     height: 95vh;
     margin: auto;
     padding-top: 36px;
-    background-image: url('../assets/sfondonatale.jpg');
-    background-repeat: no-repeat;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/sfondonatale.jpg');
     background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
 }
 
 main {
@@ -66,4 +77,29 @@ ul {
 
 .left input:checked{
     background-color: white;
+}
+
+.cta {
+    padding: 16px 48px 16px 48px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0;
+    border: 0;
+    background-color: aqua;
+    transition: 0.3s;
+    cursor: not-allowed;
+}
+
+.cta:hover {
+    background-color: #007bff;
+    box-shadow: #007bff 0px 0px 20px;
+    transition: 0.3s;
+}
+
+input {
+    height: 15px !important;
+}
+
+.benvenuta, .istruzioni, .left {
+    user-select: none;
 }

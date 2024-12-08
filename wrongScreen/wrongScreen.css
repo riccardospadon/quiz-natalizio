@@ -1,0 +1,22 @@
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/sfondonatale.jpg');
+    background-size: cover;
+    filter: blur(2px);
+}
+
+p {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+}
+
+.avviso {
+    margin-top: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
