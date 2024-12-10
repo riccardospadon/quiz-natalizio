@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Natalizio - Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+  </head>
+  <body>
+    <!-- quiz -->
+    <div class="testing">
+      <div class="timer">
+        <p class="seconds">
+          SECONDI <br />
+          <span id="time"></span> <br />
+          RIMASTI
+        </p>
+      </div>
+      <div id="titleQuiz"></div>
+      <div id="answers"></div>
+    </div>
+
+    <!-- numero di domanda e tasto "procedi" -->
+    <div class="bottom">
+      <h3 class="numeroDomanda">
+        DOMANDA: <span id="numero"></span> <span id="backslash"></span>
+        <span id="numeroDomandaMax"></span>
+      </h3>
+      <button id="proceedBtn">PROCEDI</button>
+    </div>
+
+    <!-- risultati -->
+    <div class="results">
+        <h4 class="numeroRisposteCorrette">Risposte corrette: <span id="points">4/10 (40%)</span></h4>
+        <div class="visualizzazionePercentuale"></div>
+        <h4 class="numeroRisposteErrate">Risposte errate: <span id="wrong-points">6/10 (60%)</span></h4>
+    </div>
+
+    <script type="module" src="quiz.js"></script>
+  </body>
+</html>
