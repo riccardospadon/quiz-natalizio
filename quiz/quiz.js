@@ -36,3 +36,36 @@ window.onload = function load(){
     let timeContainer = document.querySelector('.seconds')
     timeContainer.style.userSelect = 'none'
 }
+
+function nextQuestion() {
+    for(let timeout of timeouts){
+        clearTimeout(timeout)
+    }
+
+    if(index > 0){
+        const previousQuestion = shuffledQuestions[index - 1]
+        inputButtons = document.querySelectorAll('input[type="radio"]')
+        for(const inputButton of inputButtons){
+            if(inputButton.checked){
+                if(inputButton.value === previousQuestion.correct_answer){
+                    points++
+                }
+            }
+        }
+    }
+
+    if(index >= shuffledQuestions.length){
+        showResults()
+        return
+    }
+
+    questionNumberTag.innerHTML = index + 1
+    backslashTag.innerHTML = '/'
+    maxQuestionNumberTag.innerHTML = MAX_QUESTIONS
+    questionNumberTag.style.userSelect = 'none'
+    inputButtons = []
+    currentInputButtons = []
+    showQuestionAndAnswer()
+
+    timeout()
+}
