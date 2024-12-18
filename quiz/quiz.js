@@ -151,3 +151,36 @@ function shuffleAnswers(arr){
     return arr.sort(() => Math.random() - 0.5)
 }
 
+function showResults() {
+    let resultsContainer = document.querySelector('.results')
+    let testContainer = document.querySelector('.testing')
+    let bottomPart = document.querySelector('.bottom')
+    let pointsText = document.querySelector('#points')
+
+    let percentage = (points/MAX_QUESTIONS) * 100
+    pointsText.innerHTML = points + '/' + MAX_QUESTIONS + ' (' + percentage + '%)'
+    let wrongPointsText = document.querySelector('#wrong-points')
+    let wrongPercentage = ((MAX_QUESTIONS - points) / MAX_QUESTIONS)*100
+    wrongPointsText.innerHTML = (MAX_QUESTIONS - points) + '/' + MAX_QUESTIONS + ' (' + wrongPercentage + '%)'
+
+    let finalText = document.querySelector('#finalText')
+
+    const PASSED_TEXT_POINTS = Math.ceil((shuffledQuestions.length*6)/10)
+
+    //TODO: AGGIUNGERE IL TESTO PER IL 100% DELLE RISPOSTE ESATTE
+    if(points >= PASSED_TEXT_POINTS){
+        finalText.innerHTML = 'Congratulazioni! Hai superato il test, ma non hai ottenuto il punteggio massimo, quindi niente regalo AHAH!'
+        finalText.style.color = 'aquamarine'
+    } else {
+        finalText.innerHTML = 'Mi dipiace ma niente regalo AHAHAH'
+        finalText.style.color = 'black'
+    }
+
+    let circularResults = document.querySelector('.circularPercentageVisualization')
+    let pointsDeg = (percentage*360)/100
+    circularResults.style.background = 'conic-gradient(#00FFFF 0deg ' + pointsDeg + 'deg, #9D1D8F ' + pointsDeg + 'deg 360deg)'
+
+    resultsContainer.style.display = 'block'
+    testContainer.style.display = 'none'
+    bottomPart.style.display = 'none'
+}
