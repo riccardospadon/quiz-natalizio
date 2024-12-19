@@ -184,3 +184,7 @@ function showResults() {
     testContainer.style.display = 'none'
     bottomPart.style.display = 'none'
 }
+
+function setTime(){
+    
+}
