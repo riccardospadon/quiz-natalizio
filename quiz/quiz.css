@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Knewave&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Knewave", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/sfondonatale.jpg');
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.testing .tondo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 5px solid transparent;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.seconds {
+    font-size: 12px;
+}
+
+#time {
+    font-size: 35px;
+}
+
+h3 #questionNumber {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.bottom h3 {
+    letter-spacing: 0.2rem;
+}
+
+.testing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    height: 400px;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+}
+
+#proceedBtn {
+    padding: 16px 48px, 16px 48px;
+    font-size: 18px;
+    border-radius: 0;
+    border: 0;
+    background-color: #75FBFD;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#proceedBtn:hover {
+    background-color: #5ED5F7;
+    box-shadow: #75FBFD 0px 0px 20px;
+    transition: 0.3s;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    align-items: center;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 3rem;
+    color: white;
+    margin-bottom: 32px;
+    padding-left: 38px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+input[type="radio"] {
+    visibility: hidden;
+}
+
+input[type="radio"] + label {
+    cursor: pointer;
+    padding: 1.5em;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 40px;
+    margin: 5px 0;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    transition: background-color 0.2s ease-in-out;
+}
+
+input[type="radio"]:hover + label{
+    background-color: #1E90FF;
+}
+
+
+input[type="radio"]:checked + label {
+    background-color: #d20094;
+}
+
+#answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0px;
+    width: 550px;
+}
+
+.item {
+    flex-basis: 49%
+}
+
+#backslash, #numeroDomandaMax {
+    color: #d20094;
+}
+
+.numeroDellaDomanda  {
+    user-select: none;
+}
+
+#finalText {
+    color: white;
+    text-align: center;
+    bottom: 300px;
+    margin-top: 200px;
+    font-size: 60px;
+}
+
+h4.numeroRisposteCorrette {
+    color: #00FFFF;
+    text-align: center;
+}
+
+h4.numeroRisposteErrate {
+    color: #9D1D8F;
+    text-align: center;
+}
+
+.results {
+    display: none;
+    font-size: 30px;
+    margin-top: 40px;
+    user-select: none;
+}
+
+.visualizzazionePercentuale {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    border: 2px solid white;
+}
