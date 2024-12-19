@@ -186,5 +186,26 @@ function showResults() {
 }
 
 function setTime(){
-    
+    let time = document.querySelector('#time')
+    timeouts.push(
+        setTimeout(function(){
+            time.innerHTML = timeRemaining
+            let currentTimePercentage = (timeRemaining/TIME_PER_QUESTION)*100
+            let currentGrade = (360*currentTimePercentage)/100
+            timeCircle.style.borderImage = 'conic-gradient(transparent 0deg ' + (360 - currentGrade) + 'deg, #00FFFF ' + (360 - currentGrade) + 'deg 360deg) 1'
+            
+            if(timeRemaining === 0){
+                nextQuestion()
+            }
+        }, timeout)
+    )
+}
+
+function timeout(){
+    let _start = TIME_PER_QUESTION
+    let currentTime = TIME_PER_QUESTION
+    while(currentTime >= 0){
+        let timeValue = (_start - currentTime) + 1
+        setTime(currentTime--, timeValue*1000)
+    }
 }
