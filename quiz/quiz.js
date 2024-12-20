@@ -176,7 +176,7 @@ function showResults() {
         finalText.style.color = 'black'
     }
 
-    let circularResults = document.querySelector('.circularPercentageVisualization')
+    let circularResults = document.querySelector('.visualizzazionePercentuale')
     let pointsDeg = (percentage*360)/100
     circularResults.style.background = 'conic-gradient(#00FFFF 0deg ' + pointsDeg + 'deg, #9D1D8F ' + pointsDeg + 'deg 360deg)'
 
