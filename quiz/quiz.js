@@ -147,7 +147,7 @@ function showQuestionAndAnswer() {
     index++
 }
 
-function shuffleAnswers(arr){
+function shuffledAnswers(arr){
     return arr.sort(() => Math.random() - 0.5)
 }
 
@@ -185,14 +185,15 @@ function showResults() {
     bottomPart.style.display = 'none'
 }
 
-function setTime(){
+function setTime(timeRemaining, timeout){
     let time = document.querySelector('#time')
     timeouts.push(
         setTimeout(function(){
             time.innerHTML = timeRemaining
             let currentTimePercentage = (timeRemaining/TIME_PER_QUESTION)*100
             let currentGrade = (360*currentTimePercentage)/100
-            timeCircle.style.borderImage = 'conic-gradient(transparent 0deg ' + (360 - currentGrade) + 'deg, #00FFFF ' + (360 - currentGrade) + 'deg 360deg) 1'
+            timeCircle.style.background = `conic-gradient(#00FFFF 0deg ${currentGrade}deg, transparent ${currentGrade}deg 360deg)`
+            // timeCircle.style.background = 'conic-gradient(transparent 0deg ' + (360 - currentGrade) + 'deg, #00FFFF ' + (360 - currentGrade) + 'deg 360deg) 1'
             
             if(timeRemaining === 0){
                 nextQuestion()
@@ -201,7 +202,7 @@ function setTime(){
     )
 }
 
-function timeout(){
+function timeout(timeout = 1000){
     let _start = TIME_PER_QUESTION
     let currentTime = TIME_PER_QUESTION
     while(currentTime >= 0){
