@@ -6,7 +6,7 @@ let points = 0
 
 let index = 0
 
-const TIME_PER_QUESTION = 3000
+const TIME_PER_QUESTION = 30
 
 let timeouts = []
 let timeCircle = document.querySelector('.tondo')
@@ -172,8 +172,8 @@ function showResults() {
         finalText.innerHTML = 'Congratulazioni! Hai superato il test e hai ottenuto il punteggio massimo, quindi puoi aprire il tuo regalo! 🎉 🎁'
         finalText.style.color = 'gold'
     } else if(points >= PASSED_TEXT_POINTS && points < MAX_QUESTIONS){
-        finalText.innerHTML = 'Congratulazioni! Hai superato il test, ma non hai ottenuto il punteggio massimo, quindi niente regalo AHAH!'
-        finalText.style.color = 'aquamarine'
+        finalText.innerHTML = 'Congratulazioni! Hai superato il test, ma non hai ottenuto il punteggio massimo, quindi niente regalo AHAH!<br />' +  'Ritenta e sarai più fortunata!!!'
+        finalText.style.color = '#3CB371'
     } else {
         finalText.innerHTML = 'Mi dipiace ma niente regalo AHAHAH'
         finalText.style.color = 'black'
@@ -181,7 +181,7 @@ function showResults() {
 
     let circularResults = document.querySelector('.visualizzazionePercentuale')
     let pointsDeg = (percentage*360)/100
-    circularResults.style.background = 'conic-gradient(#00FFFF 0deg ' + pointsDeg + 'deg, #9D1D8F ' + pointsDeg + 'deg 360deg)'
+    circularResults.style.background = 'conic-gradient(#1bd39d 0deg ' + pointsDeg + 'deg, #00000000 ' + pointsDeg + 'deg 360deg)'
 
     resultsContainer.style.display = 'block'
     testContainer.style.display = 'none'
@@ -195,8 +195,7 @@ function setTime(timeRemaining, timeout){
             time.innerHTML = timeRemaining
             let currentTimePercentage = (timeRemaining/TIME_PER_QUESTION)*100
             let currentGrade = (360*currentTimePercentage)/100
-            timeCircle.style.background = `conic-gradient(#00FFFF 0deg ${currentGrade}deg, transparent ${currentGrade}deg 360deg)`
-            // timeCircle.style.background = 'conic-gradient(transparent 0deg ' + (360 - currentGrade) + 'deg, #00FFFF ' + (360 - currentGrade) + 'deg 360deg) 1'
+            timeCircle.style.background = `conic-gradient(#00d28f 0deg ${currentGrade}deg, transparent ${currentGrade}deg 360deg)`
             
             if(timeRemaining === 0){
                 nextQuestion()

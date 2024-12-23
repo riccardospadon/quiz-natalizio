@@ -83,14 +83,14 @@ ul {
     font-size: 18px;
     border-radius: 0;
     border: 0;
-    background-color: aquamarine;
+    background-color: #00d28f;
     transition: 0.3s;
     cursor: not-allowed;
 }
 
 .cta:hover {
-    background-color: rgb(117, 218, 184);
-    box-shadow: rgb(117, 218, 184) 0px 0px 20px;
+    background-color: #02af78;
+    box-shadow: #02af78 0px 0px 20px;
     transition: 0.3s;
 }
 

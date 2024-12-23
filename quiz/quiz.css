@@ -36,7 +36,7 @@ body{
     height: 100px;
     border-radius: 50%;
     background-color: transparent;
-    border: 5px solid #00FFFF;
+    border: 5px solid #00d28f;
     display: flex;
     justify-content: center;
     color: white;
@@ -78,14 +78,14 @@ h3 #questionNumber {
     font-size: 18px;
     border-radius: 0;
     border: 0;
-    background-color: #75FBFD;
+    background-color: #00d28f;
     transition: 0.3s;
     cursor: pointer;
 }
 
 #proceedBtn:hover {
-    background-color: #5ED5F7;
-    box-shadow: #75FBFD 0px 0px 20px;
+    background-color: #02af78;
+    box-shadow: #02af78 0px 0px 20px;
     transition: 0.3s;
 }
 
@@ -124,7 +124,7 @@ input[type="radio"] + label {
 
 
 input[type="radio"]:checked + label {
-    background-color: #d20094;
+    background-color: #3CB371;
 }
 
 
@@ -144,7 +144,7 @@ input[type="radio"]:checked + label {
 
 
 #backslash, #numeroDomandaMax {
-    color: #d20094;
+    color: gold;
 }
 
 .numeroDellaDomanda  {
@@ -160,12 +160,12 @@ input[type="radio"]:checked + label {
 }
 
 h4.numeroRisposteCorrette {
-    color: #00FFFF;
+    color: #1bd39d;
     text-align: center;
 }
 
 h4.numeroRisposteErrate {
-    color: #9D1D8F;
+    color: black;
     text-align: center;
 }
 
