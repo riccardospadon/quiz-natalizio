@@ -6,7 +6,7 @@ let points = 0
 
 let index = 0
 
-const TIME_PER_QUESTION = 30
+const TIME_PER_QUESTION = 3000
 
 let timeouts = []
 let timeCircle = document.querySelector('.tondo')

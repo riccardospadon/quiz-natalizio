@@ -73,7 +73,8 @@ h3 #questionNumber {
 }
 
 #proceedBtn {
-    padding: 16px 48px, 16px 48px;
+    padding: 16px 48px 16px 48px;
+    font-weight: bold;
     font-size: 18px;
     border-radius: 0;
     border: 0;
@@ -120,16 +121,13 @@ input[type="radio"] + label {
     transition: background-color 0.2s ease-in-out;
 }
 
-input[type="radio"]:hover + label{
-    background-color: #1E90FF;
-}
 
 
 input[type="radio"]:checked + label {
     background-color: #d20094;
 }
 
-#answers {
+/* #answers {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -139,11 +137,22 @@ input[type="radio"]:checked + label {
     gap: 10px;
     margin: 0px;
     width: 550px;
+} */
+
+#answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    width: 900px;
+    margin: auto;
 }
 
 .item {
     flex-basis: 49%
 }
+
+
 
 #backslash, #numeroDomandaMax {
     color: #d20094;
