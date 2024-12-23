@@ -168,7 +168,10 @@ function showResults() {
     const PASSED_TEXT_POINTS = Math.ceil((shuffledQuestions.length*6)/10)
 
     //TODO: AGGIUNGERE IL TESTO PER IL 100% DELLE RISPOSTE ESATTE
-    if(points >= PASSED_TEXT_POINTS){
+    if(points === MAX_QUESTIONS){
+        finalText.innerHTML = 'Congratulazioni! Hai superato il test e hai ottenuto il punteggio massimo, quindi puoi aprire il tuo regalo! 🎉 🎁'
+        finalText.style.color = 'gold'
+    } else if(points >= PASSED_TEXT_POINTS && points < MAX_QUESTIONS){
         finalText.innerHTML = 'Congratulazioni! Hai superato il test, ma non hai ottenuto il punteggio massimo, quindi niente regalo AHAH!'
         finalText.style.color = 'aquamarine'
     } else {
