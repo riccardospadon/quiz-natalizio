@@ -172,10 +172,10 @@ function showResults() {
         finalText.innerHTML = 'Congratulazioni! Hai superato il test e hai ottenuto il punteggio massimo, quindi puoi aprire il tuo regalo! 🎉 🎁'
         finalText.style.color = 'gold'
     } else if(points >= PASSED_TEXT_POINTS && points < MAX_QUESTIONS){
-        finalText.innerHTML = 'Congratulazioni! Hai superato il test, ma non hai ottenuto il punteggio massimo, quindi niente regalo AHAH!<br />' +  'Ritenta e sarai più fortunata!!!'
+        finalText.innerHTML = 'Congratulazioni! Hai superato il test, ma non hai ottenuto il punteggio massimo, quindi niente regalo AHAH!<br />' +  'Ritenta e sarai più fortunata!!! (clicca il tasto "aggiorna")'
         finalText.style.color = '#3CB371'
     } else {
-        finalText.innerHTML = 'Mi dipiace ma niente regalo AHAHAH'
+        finalText.innerHTML = 'Mi dipiace ma niente regalo AHAHAH! Clicca il tasto "aggiorna" per ritentare il test!'
         finalText.style.color = 'black'
     }
 
